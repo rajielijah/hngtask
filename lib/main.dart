@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Display User Input',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
       home: UserInput(),
     );
@@ -40,12 +40,16 @@ class _UserInputState extends State<UserInput> {
         child: Column(
           children: [
             Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset('images/download.png', height: 100,),
+            ),
+            Padding(
               padding: const EdgeInsets.all(18.0),
               child: TextField(
                 controller: myController,
                  decoration: InputDecoration(  
       border: InputBorder.none,  
-      labelText: 'Enter Name',  
+      // labelText: 'Enter Name',  
       hintText: 'Enter Your Name'  
   ),  
               ),
